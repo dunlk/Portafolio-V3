@@ -1,6 +1,9 @@
 ---
 import "@/styles/starwind.css";
 import "../styles/global.css";
+import CatModel from '@/components/layout/CatModel.astro';
+import Header from "@/components/layout/Header.astro";
+const { title } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -10,10 +13,14 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Milton Ytusaca</title>
+    <title>{title}</title>
 	</head>
-	<body class="bg-[#262B3F]">
-		<slot />
+	<body class="bg-[#262B3F] max-w-[750px] mx-auto font-nunito">
+    <Header title="Milton.Ytusaca"/>
+    <CatModel />
+    <div >
+      <slot />
+    </div>
 	</body>
 </html>
 
