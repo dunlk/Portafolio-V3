@@ -2,22 +2,23 @@
 
 const items = [
   {
-    label: "Work",
-    href: "#work"
+    label: "About",
+    href: "/"
   },
   {
-    label: "About",
-    href: "#about"
+    label: "Work",
+    href: "/works"
   },
+
   {
     label: "Uses",
-    href: "#uses"
+    href: "/uses"
   }
 ]
 ---
 
-<nav class="flex justify-center items-center gap-2 ">
-  {items.map((item) => (<a class="hover:text-white transition-colors " href={item.href}>{item.label}</a>))}
+<nav class="flex justify-center items-center gap-2   text-lg font-nunito font-extralight">
+  {items.map((item) => (<a class="hover:text-white transition-colors" href={item.href}>{item.label}</a>))}
 </nav>
-<button>GitHub</button>
+<a class="hover:text-white transition-colors cursor-pointer font-extralight text-lg">GitHub</a>
 
